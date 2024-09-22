@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e1e9f0, #c3cfe2);
+    font-family: 'Arial', sans-serif;
+}
+
+.toolbar {
+    margin: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.toolbar select, .toolbar input, .toolbar button {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.toolbar button:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.7); /* Glowing effect on hover */
+}
+
+.toolbar button.active {
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.9); /* Glowing effect for active button */
+}
+
+.container {
+    position: relative;
+}
+
+canvas {
+    border: 2px solid #333;
+    cursor: crosshair;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.color-palette {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.colors {
+    display: flex;
+    margin-left: 10px;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s, box-shadow 0.3s; /* Add transition for glowing */
+}
+
+.color:hover, .color.selected {
+    border: 2px solid #000;
+    box-shadow: 0 0 10px 2px rgba(0, 123, 255, 0.5); /* Glowing effect */
+}

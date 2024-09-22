@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drawing App</title>
+</head>
+<body>
+    <div class="toolbar">
+        <select id="brushSelect">
+            <option value="pencil">Pencil</option>
+            <option value="roundBrush">Round Brush</option>
+            <option value="flatBrush">Flat Brush</option>
+            <option value="textureBrush">Texture Brush</option>
+        </select>
+        <input type="color" id="colorPicker" value="#000000">
+        <input type="range" id="sizeSlider" min="1" max="100" value="5">
+        <span>Size: <span id="sizeValue">5</span></span>
+        <button id="eraserButton">Eraser</button>
+        <button id="clearButton">Clear</button>
+    </div>
+    <div class="color-palette">
+        <span>Select Brush Color:</span>
+        <div class="colors">
+            <div class="color" style="background-color: #FF5733;" data-color="#FF5733"></div>
+            <div class="color" style="background-color: #33FF57;" data-color="#33FF57"></div>
+            <div class="color" style="background-color: #3357FF;" data-color="#3357FF"></div>
+            <div class="color" style="background-color: #FF33A1;" data-color="#FF33A1"></div>
+            <div class="color" style="background-color: #F1C40F;" data-color="#F1C40F"></div>
+        </div>
+    </div>
+    <div class="container">
+        <canvas id="artCanvas"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
